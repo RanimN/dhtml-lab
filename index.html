@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.highlight {
+  color: green;
+  font-weight: bold;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.extra-style {
+  font-size: 20px;
+  text-decoration: underline;
+}
+</style>
+
+<script>
+function addHighlight() {
+  document.getElementById("msg").classList.add("highlight");
+}
+
+function removeHighlight() {
+  document.getElementById("msg").classList.remove("highlight");
+}
+
+function toggleBackground() {
+  document.getElementById("msg").classList.toggle("bg-yellow");
+  document.getElementById("msg").classList.toggle("extra-style");
+}
+</script>
+</head>
+
+<body>
+<a href="index.html">Task 1</a> |
+<a href="task2.html">Task 2</a> |
+<a href="task3.html">Task 3</a> |
+<a href="task4.html">Task 4</a> |
+<a href="task5.html">Task 5</a>
+<hr>
+
+<p id="msg"
+   onmouseover="addHighlight()"
+   onmouseout="removeHighlight()"
+   onclick="toggleBackground()">
+  Hover over this text and click to change styles!
+</p>
+</body>
+</html>

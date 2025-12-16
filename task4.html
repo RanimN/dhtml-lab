@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#menu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    margin-top: 10px;
+}
+
+#menu.show {
+    max-height: 40px;
+}
+
+#menu a {
+    display: none;
+    margin: 4px 0;
+    color: blue;
+}
+</style>
+
+<script>
+var index = 0;
+
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    var items = menu.getElementsByTagName("a");
+
+    for (var i = 0; i < items.length; i++) {
+        items[i].style.display = "none";
+    }
+
+    items[index].style.display = "block";
+    index = (index + 1) % items.length;
+
+    menu.classList.toggle("show");
+}
+</script>
+</head>
+
+<body>
+<a href="index.html">Task 1</a> |
+<a href="task2.html">Task 2</a> |
+<a href="task3.html">Task 3</a> |
+<a href="task4.html">Task 4</a> |
+<a href="task5.html">Task 5</a>
+<hr>
+
+<button onclick="toggleMenu()">Next Menu Item</button>
+
+<div id="menu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</div>
+</body>
+</html>

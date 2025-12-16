@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myBtn {
+    padding: 10px 24px;
+    border: none;
+    background: #008CBA;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background 0.5s ease,
+                            border-radius 0.5s ease,
+                            box-shadow 0.5s ease;
+}
+
+#myBtn.hovered {
+    background: #e91e63;
+    border-radius: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+</style>
+
+<script>
+function changeColor() {
+    var btn = document.getElementById("myBtn");
+    btn.classList.toggle("hovered");
+
+    if (btn.classList.contains("hovered")) {
+        btn.innerHTML = "Thank you";
+    } else {
+        btn.innerHTML = "Hover Me!";
+    }
+}
+</script>
+</head>
+
+<body>
+<a href="index.html">Task 1</a> |
+<a href="task2.html">Task 2</a> |
+<a href="task3.html">Task 3</a> |
+<a href="task4.html">Task 4</a> |
+<a href="task5.html">Task 5</a>
+<hr>
+
+<button id="myBtn"
+                onmouseover="changeColor()"
+                onmouseout="changeColor()">
+    Hover Me!
+</button>
+</body>
+</html>

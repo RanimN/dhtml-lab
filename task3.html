@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#box {
+    width: 50px;
+    height: 50px;
+    background: orange;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+</style>
+
+<script>
+var angle = 0;
+var animationId = null;
+
+function startAnimation() {
+    var box = document.getElementById("box");
+    var radius = 100;
+
+    animationId = setInterval(function () {
+        var x = 200 + radius * Math.cos(angle);
+        var y = 200 + radius * Math.sin(angle);
+
+        box.style.left = x + "px";
+        box.style.top = y + "px";
+
+        angle += 0.05;
+    }, 20);
+}
+
+function stopAnimation() {
+    clearInterval(animationId);
+}
+</script>
+</head>
+
+<body>
+<a href="index.html">Task 1</a> |
+<a href="task2.html">Task 2</a> |
+<a href="task3.html">Task 3</a> |
+<a href="task4.html">Task 4</a> |
+<a href="task5.html">Task 5</a>
+<hr>
+
+<div id="box"></div>
+<button onclick="startAnimation()">Start</button>
+<button onclick="stopAnimation()">Stop</button>
+</body>
+</html>

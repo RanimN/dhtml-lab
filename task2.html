@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function updateMessage() {
+    var input = document.getElementById("name");
+    var user = input.value;
+    var output = document.getElementById("greeting");
+
+    var currentDate = new Date();
+
+    output.innerHTML =
+        "Welcome, " + user + "!<br>" +
+        "Current date and time: " + currentDate.toLocaleString();
+
+    input.value = "";
+}
+</script>
+</head>
+
+<body>
+<a href="index.html">Task 1</a> |
+<a href="task2.html">Task 2</a> |
+<a href="task3.html">Task 3</a> |
+<a href="task4.html">Task 4</a> |
+<a href="task5.html">Task 5</a>
+<hr>
+
+<input type="text" id="name" placeholder="Enter your name">
+<button onclick="updateMessage()">Submit</button>
+<p id="greeting"></p>
+</body>
+</html>
